@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import { pxToRem } from 'utils/theme';
 import classNames from 'classnames';
 
-export type InputFieldProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> & {
+export type InputFieldProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'onChange'
+> & {
   initialValue?: string;
   onChange?: (value: string) => void;
   validate?: (value: string) => boolean;
@@ -34,7 +37,7 @@ const InputField: FC<InputFieldProps> = ({
   ...restProps
 }) => {
   const inputField = useInput(initialValue, {
-    handleChange:  onChange,
+    handleChange: onChange,
     validate
   });
 

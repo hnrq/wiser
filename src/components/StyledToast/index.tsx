@@ -5,7 +5,7 @@ export default styled(ToastContainer).attrs({
   className: 'toast-container',
   toastClassName: 'toast',
   bodyClassName: 'body',
-  progressClassName: 'progress',
+  progressClassName: 'progress'
 })`
   .Toastify__toast--error {
     background: ${({ theme }) => theme.colors.red};

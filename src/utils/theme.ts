@@ -27,7 +27,6 @@ export const getBreakpoint = (range: keyof BreakpointsType) => ({
 
 export const getSpacing = (index: number) => `${spacings[index]}rem`;
 
-
 export default {
   colors: {
     primaryColor: '#989FDB',
@@ -36,7 +35,7 @@ export default {
     lavender: '#FAF5FF',
     red: '#FF377F'
   },
-  fontFamily: "Montserrat",
+  fontFamily: 'Montserrat',
   fontSizes: {
     extraSmall: pxToRem(12),
     small: pxToRem(14),

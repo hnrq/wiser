@@ -12,7 +12,7 @@ const PageContainer = styled.div`
   display: flex;
   height: 100vh;
   width: 100vw;
-`
+`;
 
 const Home = () => (
   <Provider store={store}>
@@ -26,6 +26,6 @@ const Home = () => (
       </PageContainer>
     </ThemeProvider>
   </Provider>
-)
+);
 
 export default Home;

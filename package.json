@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "test": "jest --verbose --watchAll",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier --write ./src/"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",

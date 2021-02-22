@@ -30,7 +30,7 @@ describe('authActions test section', () => {
   });
 
   it('should create an AUTH_USER_NOT_FOUND action', () => {
-    expect(actions.authUserNotFound('error')).toEqual({
+    expect(actions.authUserNotFound()).toEqual({
       type: AUTH_USER_NOT_FOUND
     });
   });

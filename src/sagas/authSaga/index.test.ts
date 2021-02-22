@@ -2,7 +2,11 @@ import { auth } from '.';
 import { runSaga, Saga } from 'redux-saga';
 import { AuthReducerAction } from 'reducers/authReducer';
 import * as api from 'api';
-import { authFailure, authSuccess, authUserNotFound } from 'actions/authActions';
+import {
+  authFailure,
+  authSuccess,
+  authUserNotFound
+} from 'actions/authActions';
 
 describe('authSaga test section', () => {
   it('should dispatch AUTH_SUCCESS action when successfully authenticating', async () => {
@@ -33,7 +37,7 @@ describe('authSaga test section', () => {
     mockAuth.mockClear();
   });
 
-  it('should dispatch AUTH_USER_NOT_FOUND when user isn\'t found', async () => {
+  it("should dispatch AUTH_USER_NOT_FOUND when user isn't found", async () => {
     const dispatched: Array<AuthReducerAction> = [];
     const mockAuth = jest
       .spyOn(api, 'auth')

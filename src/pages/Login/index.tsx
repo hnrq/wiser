@@ -3,7 +3,6 @@ import { BodyText, Title, Subtitle } from 'components/Text';
 import { motion } from 'framer-motion';
 import { getSpacing, pxToRem, getBreakpoint } from 'utils/theme';
 import Anchor from 'components/Anchor';
-import picture from 'assets/images/loginImage.jpg';
 import LoginForm from 'forms/LoginForm';
 
 const HomeContainer = styled.div`
@@ -11,7 +10,7 @@ const HomeContainer = styled.div`
   height: 90vh;
   margin: auto;
   border-radius: ${pxToRem(8)};
-  box-shadow: 0px 10px 10px #FFDDFF;
+  box-shadow: 0px 10px 10px #ffddff;
   backgroundcolor: ${({ theme }) => theme.colors.lavender};
   display: flex;
   @media ${getBreakpoint('sm').down} {
@@ -46,10 +45,10 @@ const ImageContainer = styled.div`
     height: 100%;
     background: linear-gradient(0deg, #130525 0%, rgba(105, 57, 153, 0) 100%);
   }
-`
-  
+`;
+
 const Image = styled.img`
-  object-fit:cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 `;

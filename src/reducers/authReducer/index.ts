@@ -28,7 +28,10 @@ const initialState: AuthReducerStateType = {
   authenticated: false
 };
 
-export default function authReducer(state = initialState, action: AuthReducerAction) {
+export default function authReducer(
+  state = initialState,
+  action: AuthReducerAction
+) {
   switch (action.type) {
     case AUTH_REQUESTED:
       return {

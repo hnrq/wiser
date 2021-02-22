@@ -9,7 +9,10 @@ import {
 describe('authReducer test section', () => {
   it('should handle AUTH_REQUESTED', () => {
     expect(
-      authReducer({ userInfo: {}, loading: false, authenticated: true }, { type: AUTH_REQUESTED })
+      authReducer(
+        { userInfo: {}, loading: false, authenticated: true },
+        { type: AUTH_REQUESTED }
+      )
     ).toEqual({
       userInfo: {},
       loading: true,
@@ -47,14 +50,14 @@ describe('authReducer test section', () => {
   it('should handle AUTH_USER_NOT_FOUND', () => {
     expect(
       authReducer(
-        { userInfo: {}, loading: true,  authenticated: true },
+        { userInfo: {}, loading: true, authenticated: true },
         { type: AUTH_USER_NOT_FOUND }
       )
     ).toEqual({
       userInfo: {},
       loading: false,
       authenticated: false,
-      error: 'USER_NOT_FOUND',
+      error: 'USER_NOT_FOUND'
     });
   });
 });
