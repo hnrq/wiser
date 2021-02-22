@@ -8,13 +8,13 @@ import LoginForm from 'forms/LoginForm';
 
 const HomeContainer = styled.div`
   width: 768px;
-  overflow:hidden;
   height: 90vh;
   margin: auto;
   border-radius: ${pxToRem(8)};
   box-shadow: 0px 10px 10px #ffddff;
   backgroundcolor: ${({ theme }) => theme.colors.lavender};
   display: flex;
+  overflow: hidden;
   @media ${getBreakpoint('sm').down} {
     height: 100vh;
     width: 100vw;
@@ -37,16 +37,6 @@ const ImageContainer = styled.div`
   @media ${getBreakpoint('sm').down} {
     display: none;
   }
-  &:before {
-    z-index: 2;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, #130525 0%, rgba(105, 57, 153, 0) 100%);
-  }
 `;
 
 const titleAnimation = {
@@ -66,6 +56,7 @@ const Home = () => (
         src="/images/loginImage.jpg"
         alt="Mulher de óculos olhando para um notebook"
         objectFit="cover"
+        quality="100"
         objectPosition="relative"
         layout="fill"
       />
