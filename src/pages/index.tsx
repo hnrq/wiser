@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 import { BodyText, Title, Subtitle } from 'components/Text';
 import { motion } from 'framer-motion';
 import { getSpacing, pxToRem, getBreakpoint } from 'utils/theme';
@@ -7,6 +8,7 @@ import LoginForm from 'forms/LoginForm';
 
 const HomeContainer = styled.div`
   width: 768px;
+  overflow:hidden;
   height: 90vh;
   margin: auto;
   border-radius: ${pxToRem(8)};
@@ -16,7 +18,6 @@ const HomeContainer = styled.div`
   @media ${getBreakpoint('sm').down} {
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
   }
 `;
 
@@ -37,6 +38,7 @@ const ImageContainer = styled.div`
     display: none;
   }
   &:before {
+    z-index: 2;
     content: '';
     position: absolute;
     top: 0;
@@ -45,12 +47,6 @@ const ImageContainer = styled.div`
     height: 100%;
     background: linear-gradient(0deg, #130525 0%, rgba(105, 57, 153, 0) 100%);
   }
-`;
-
-const Image = styled.img`
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
 `;
 
 const titleAnimation = {
@@ -69,6 +65,9 @@ const Home = () => (
       <Image
         src="/images/loginImage.jpg"
         alt="Mulher de óculos olhando para um notebook"
+        objectFit="cover"
+        objectPosition="relative"
+        layout="fill"
       />
     </ImageContainer>
     <LoginContainer>
