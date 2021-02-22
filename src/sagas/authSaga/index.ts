@@ -17,7 +17,7 @@ export function* auth({
 }) {
   try {
     const { data } = yield call(api.auth, email, password);
-    if (data.length > 0) {
+    if (data.length > 0 && data[0].password === password) {
       toast.success('Log-in realizado com sucesso.');
       yield put(authSuccess(data[0]));
     } else {

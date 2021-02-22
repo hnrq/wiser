@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
-        <StyledToast />
+        <StyledToast limit={3} />
         <PageContainer>
           <Component {...pageProps} />
         </PageContainer>
