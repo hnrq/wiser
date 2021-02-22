@@ -23,7 +23,11 @@ const PasswordField: FC<PasswordFieldProps> = ({ label, ...restProps }) => {
       name="password-field"
       {...restProps}
       endAdornment={
-        <IconButton onClick={toggleVisibility} data-testid="visibility-button">
+        <IconButton
+          type="button"
+          onClick={toggleVisibility}
+          data-testid="visibility-button"
+        >
           {visible ? <Eye /> : <EyeOff />}
         </IconButton>
       }
